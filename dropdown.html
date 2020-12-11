@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var Mobile=["1)Oppo","2)Nokia","3)vivo","4)Samsung"];
+        var TV=["1) Samsung","2) LG","3) Mi"];
+        var Laptop=["1)Dell","2)HP","3)Lenevo"];
+        
+        function selectEqupment()
+        {
+            choice=document.getElementById("climate").value;
+            var mydiv1=document.getElementById("mydiv");
+            mydiv1.innerHTML="Welcome to ABC Showroom<br>";
+            switch (choice)
+            {
+                case 'mobile':
+               Mobile.forEach(function(element){
+                   mydiv1.innerHTML+=element+"<br>";
+                   
+               });
+                break;
+                
+                case 'TV':
+               
+               TV.forEach(function (element){
+                   mydiv1.innerHTML+=element+"<br>";
+                   
+               });
+                break;
+                
+                case 'laptop':
+                
+               Laptop.forEach(function (element){
+                   mydiv1.innerHTML+=element+"<br>";
+                   
+               });
+               
+                
+
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <select onchange=selectEqupment() id="climate" style="font-size: 30px;background-color: rgb(117, 170, 117);font-style: italic;">
+        <option value="select">--select--</option>
+        <option value="mobile">Mobile</option>
+        <option value="TV">TV</option>
+        <option value="laptop">Laptop</option>
+       
+    </select>
+    <div id="mydiv" style="color: deeppink; height: 170px; width: 400px; background-color: khaki;
+    font-size: 30px; font-style: italic; ">
+       </div><br>
+    <!-- <input type="button" value="CkickHere" onclick=selectEqupment()> -->
+  
+
+    
+    
+   
+</body>
+</html>

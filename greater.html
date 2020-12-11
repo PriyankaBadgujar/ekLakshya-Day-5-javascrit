@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grt{
+            background-color: yellow;
+            color: black;
+            height: 50px;
+            width: 200px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        number1=prompt("enter first no: ");
+        number2=prompt("enter second no: ");
+        number3=prompt("enter third no: ");
+
+        n1=parseInt(number1)
+        n2=parseInt(number2)
+        n3=parseInt(number3)
+
+        document.write("First no is: "+" "+number1+"<br>")
+        document.write("Second no is: "+" "+number2+"<br>")
+        document.write("Third no is: "+" "+number3+"<br>")
+        if(isNaN(n1) || isNaN(n2) || isNaN(n3))
+        {
+             document.write("<div id='grt'>"+"Please enter number "+"</div>")
+        }
+        else{
+        greater = number1>number2 ? number1:number2;
+        result = number3>greater ? number3:greater;
+        document.write("<div id='grt'>"+"Largest Number is:"+result+"</div>")
+        }
+    </script>
+    
+</body>
+</html>

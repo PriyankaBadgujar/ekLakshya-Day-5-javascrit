@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            font-size: 50px;
+
+          }
+        div{
+            text-align: center;
+        }
+        
+    </style>
+    <script>
+        usernames = ['priyanka','sonali','sarika','rina','ajay','chetan']
+        name = prompt('enter name')
+        u=parseInt(name)
+        function loginUser() {
+       
+        for (key in usernames) {
+                   
+        if(name==u)
+        {
+            document.getElementById('mydiv').innerHTML ="Please enter a name not number" ;
+                    break;
+        }
+
+        else if (usernames[key] == name)
+        {
+        document.getElementById('mydiv').innerHTML ='Welcome'+" " +name ;
+                    break;
+         }
+
+         else (usernames[key] != name) 
+         {
+             document.getElementById('mydiv').innerHTML =name+","+"Its wrong username try again" ;
+         }
+            }
+
+        }
+    </script>
+    
+</head>
+
+<body>
+    <input type="button" value="click me" id="username" onclick="loginUser()">
+    <br>
+    <br>
+    <div id="mydiv" style="color: deeppink; font-style: italic;font-size: 50px;"></div>
+  
+</body>
+
+</html>

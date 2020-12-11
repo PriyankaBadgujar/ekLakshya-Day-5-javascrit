@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var r=["Eat icecream","Go for swimming"];
+        var s=["Drink Tea and eat samosa,", "Enjoy rain,"];
+        var w=["Drink hot soup and sleep"];
+        var wi=["Enjoy Cycling and kite flying"];
+        function suggestUser()
+        {
+            choice=document.getElementById("climate").value;
+            var mydiv1=document.getElementById("mydiv");
+            mydiv1.innerHTML="Enjoy Season<br>";
+            switch (choice)
+            {
+                case 'rainy':
+               r.forEach(function(element){
+                   mydiv1.innerHTML+=element+"<br>";
+                   
+               });
+                break;
+                
+                case 'summer':
+               
+               s.forEach(function (element){
+                   mydiv1.innerHTML+=element+"<br>";
+                   
+               });
+                break;
+                
+                case 'winter':
+                
+               w.forEach(function (element){
+                   mydiv1.innerHTML+=element+"<br>";
+                   
+               });
+                break;
+                
+                case 'windy':
+               wi.forEach(function (element){
+                   mydiv1.innerHTML+=element+"<br>";
+                   
+               });
+                
+                
+
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <select onchange=suggestUser() id="climate" style="font-size: 30px;background-color: rgb(117, 170, 117);font-style: italic;">
+        <option value="select">--select--</option>
+        <option value="rainy">Rainy</option>
+        <option value="summer">Summer</option>
+        <option value="winter">Winter</option>
+        <option value="windy">Windy</option>
+    </select>
+    <div id="mydiv" style="color: deeppink; height: 150px; width: 400px; background-color: khaki;
+    font-size: 40px; font-style: italic; ">
+       </div><br>
+    <!-- <input type="button" value="CkickHere" onclick=suggestUser()> -->
+  
+
+    
+    
+   
+</body>
+</html>

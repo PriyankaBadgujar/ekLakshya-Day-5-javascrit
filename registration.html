@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            color: red;
+            font-size: 40px;
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        name=prompt("Enter user name");
+        username=['priyanka','sonali','sarika','rina','ajay','chetan'];
+        u=parseInt(name)
+        if(name==u)
+        {
+            document.write("<div id='div1'>"+"Please Enter A Name not a Number"+"<div>");
+        }
+       
+        else if(username.indexOf(name) !== -1)
+         {
+        alert("Alreay Register");
+        }
+
+        else
+        {
+        alert("You are register");
+         }
+       
+    </script>
+</body>
+</html>
